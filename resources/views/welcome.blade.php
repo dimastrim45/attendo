@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Popover Test Page</title>
+    <title>Bootstrap Popover Test Pages</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
@@ -14,7 +14,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <h1>Bootstrap Popover Test</h1>
+                <h1>Bootstrap Popover Testing 3</h1>
                 <button type="button" class="btn btn-lg btn-danger" id="popoverButton" data-bs-toggle="popover"
                     title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">
                     Click to toggle popover
