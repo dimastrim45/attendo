@@ -387,6 +387,12 @@ return [
             'icon_color' => 'cyan',
             'url' => '#',
         ],
+        [
+            'text' => 'lol',
+            'icon' => 'fas fa-fw fa-user',
+            'icon_color' => 'red',
+            'url' => '#',
+        ],
     ],
 
     /*
