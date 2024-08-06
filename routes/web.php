@@ -13,22 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/dashboard', function () {
-    return view('admin');
-});
+// Route::get('/dashboard', function () {
+//     return view('admin');
+// });
 
-Route::get('/dashboard2', function () {
-    return view('admin2');
-});
+// Route::get('/dashboard2', function () {
+//     return view('admin2');
+// });
 
-Route::get('/dashboard3', function () {
-    return view('admin3');
-});
+// Route::get('/dashboard3', function () {
+//     return view('admin3');
+// });
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// all route below has to pass authorization
+Route::middleware('auth')->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
+});
