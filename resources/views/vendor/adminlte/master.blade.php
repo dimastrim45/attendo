@@ -108,6 +108,48 @@
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const darkModeIcon = document.getElementById('dark-mode-icon');
+            const darkModeClass = 'dark-mode';
+    
+            // Function to update the icon based on the mode
+            function updateIcon() {
+                if (document.body.classList.contains(darkModeClass)) {
+                    darkModeIcon.classList.remove('fa-sun');
+                    darkModeIcon.classList.add('fa-moon');
+                } else {
+                    darkModeIcon.classList.remove('fa-moon');
+                    darkModeIcon.classList.add('fa-sun');
+                }
+            }
+    
+            // Check if dark mode is enabled in localStorage
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add(darkModeClass);
+            }
+    
+            // Set the correct icon on page load
+            updateIcon();
+    
+            darkModeToggle.addEventListener('click', function () {
+                document.body.classList.toggle(darkModeClass);
+    
+                if (document.body.classList.contains(darkModeClass)) {
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    localStorage.removeItem('darkMode');
+                }
+    
+                // Update the icon when the mode changes
+                updateIcon();
+            });
+        });
+    </script>
+            
+    
+
 </body>
 
 </html>

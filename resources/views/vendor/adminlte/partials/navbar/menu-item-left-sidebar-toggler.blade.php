@@ -13,3 +13,8 @@
         <span class="sr-only">{{ __('adminlte::adminlte.toggle_navigation') }}</span>
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" id="dark-mode-toggle" href="#">
+        <i class="fas" id="dark-mode-icon"></i>
+    </a>
+</li>

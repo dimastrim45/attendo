@@ -37,6 +37,6 @@ Auth::routes();
 // all route below has to pass authorization
 Route::middleware('auth')->group(function () {
     Route::get('/', function () {
-        return view('welcome');
+        return view('admin');
     })->name('home');
 });
